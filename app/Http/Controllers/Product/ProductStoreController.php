@@ -24,16 +24,7 @@ class ProductStoreController extends Controller
      */
     public function __invoke(ProductStorePostController $request)
     {
-
-        
-        Products::create($request->validated());
-
-        $posts = Products::paginate(10);
-
-        return ProductResource::collection($posts);
-
-            return response()->json([
-            'message' => 'created successfully !.'
-            ]);
+        $post = Products::create($request->validated());
+        return new ProductResource($posts);
     }
 }
