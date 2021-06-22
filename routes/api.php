@@ -11,7 +11,6 @@ use App\Http\Controllers\Product\ProductStoreController;
 use App\Http\Controllers\Product\ProductUpdateController;
 
 
-//Brand Controllers
 
 use App\Http\Controllers\Brand\BrandStoreController;
 use App\Http\Controllers\Brand\BrandDestroyController;
