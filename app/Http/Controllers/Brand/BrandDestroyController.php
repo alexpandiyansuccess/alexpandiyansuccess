@@ -20,9 +20,8 @@ class BrandDestroyController extends Controller
         $brand = Brands::findOrFail($id);
 
         if($brand->delete()){      
-
             return response()->json([
-            'message'=>"Brand has been deleted successfully"
+            'message'=>"Brand has been deleted successfully !"
             ]);
         }
         

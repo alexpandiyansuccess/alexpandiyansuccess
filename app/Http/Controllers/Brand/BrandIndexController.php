@@ -22,6 +22,8 @@ class BrandIndexController extends Controller
     {
         $brand = Brands::paginate(10);
 
-        return BrandResource::collection($brand);
+
+        return Brands::with('BrandModels')->find($brand);
+
     }
 }

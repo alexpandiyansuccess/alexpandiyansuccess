@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Brandmodel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\BrandResource;
-use App\Models\Brandsmodels;
+use App\Models\BrandModels;
 use App\Http\Requests\BrandModelRequest;
 
 class BrandModelStoreController extends Controller
@@ -18,7 +18,9 @@ class BrandModelStoreController extends Controller
      */
     public function __invoke(BrandModelRequest $request)
     {
-        $brand=Brandsmodels::create($request->validated());
+
+        
+        $brand=BrandModels::create($request->validated());
 
         return new BrandResource($brand);
 

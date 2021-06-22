@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Brandmodel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\BrandResource;
-use App\Models\Brandsmodels;
+use App\Models\BrandModels;
 
 
 
@@ -19,7 +19,7 @@ class BrandModelIndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $brand = Brandsmodels::paginate(10);
+        $brand = BrandModels::paginate(10);
 
         return BrandResource::collection($brand);
     }

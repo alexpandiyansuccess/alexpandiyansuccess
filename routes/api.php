@@ -74,7 +74,7 @@ Route::post('/products/{id}',ProductShowyController::class);
 
 
 // Brands
-Route::post('/addbrands',BrandStoreController::class);
+Route::post('/addbrand',BrandStoreController::class);
 Route::get('/',BrandIndexController::class);
 Route::delete('/brands/{id}',BrandDestroyController::class);
 Route::post('/brands/{id}',BrandShowController::class);
@@ -82,8 +82,8 @@ Route::patch('/brands/{id}',BrandUpdateController::class);
 
 
 // BrandModels
-Route::post('/addbrandsmodels',BrandModelStoreController::class);
-Route::get('/viewbrandsmodels',BrandModelIndexController::class);
+Route::post('/addbrandmodels',BrandModelStoreController::class);
+Route::get('/viewbrandmodels',BrandModelIndexController::class);
 Route::delete('/brandsmodels/{id}',BrandModelDestroyController::class);
 Route::post('/brandsmodels/{id}',BrandModelShowController::class);
 Route::patch('/brandsmodels/{id}',BrandModelUpdateController::class);

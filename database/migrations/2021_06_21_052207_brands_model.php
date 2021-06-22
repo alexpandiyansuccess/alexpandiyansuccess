@@ -13,12 +13,12 @@ class BrandsModel extends Migration
      */
     public function up()
     {
-        Schema::create('brandsmodels',function(Blueprint $table){
+        Schema::create('brand_models',function(Blueprint $table){
             $table->id();
             $table->bigInteger('brands_id')->unsigned();
             $table->string('model');
-           $table->timestamps();
-        //    $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
+            $table->timestamps();
+           $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
         });
     }
 

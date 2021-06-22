@@ -21,10 +21,9 @@ class BrandShowController extends Controller
      */
     public function __invoke($id)
     {
-        // $brand = Brands::findOrFail($id);
-        // return new BrandResource($brand);
+       
 
-        return Brands::with('getBrandModels')->find($id);
+        return Brands::with('BrandModels')->find($id);
 
     }
 }
