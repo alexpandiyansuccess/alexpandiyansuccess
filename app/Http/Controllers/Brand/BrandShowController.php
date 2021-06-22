@@ -21,9 +21,8 @@ class BrandShowController extends Controller
      */
     public function __invoke($id)
     {
-       
-
-        return Brands::with('BrandModels')->find($id);
+  
+       return Brands::with('BrandModels')->find($id);
 
     }
 }
