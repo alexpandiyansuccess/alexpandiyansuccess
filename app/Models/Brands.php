@@ -14,7 +14,7 @@ class Brands extends Model
         'cost'
     ];
 
-    public function getBrandModels(){
-        return $this->hasOne('App\models\Brandsmodels');
+    public function getBrandModels() {
+        return $this->hasOne(Brandsmodels::class);
     }
 }
