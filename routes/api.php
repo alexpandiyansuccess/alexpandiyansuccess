@@ -10,6 +10,29 @@ use App\Http\Controllers\Product\ProductStoreController;
 
 use App\Http\Controllers\Product\ProductUpdateController;
 
+
+//Brand Controllers
+
+use App\Http\Controllers\Brand\BrandStoreController;
+use App\Http\Controllers\Brand\BrandDestroyController;
+use App\Http\Controllers\Brand\BrandIndexController;
+use App\Http\Controllers\Brand\BrandShowController;
+use App\Http\Controllers\Brand\BrandUpdateController;
+
+
+use App\Http\Controllers\Brandmodel\BrandModelDestroyController;
+use App\Http\Controllers\Brandmodel\BrandModelIndexController;
+use App\Http\Controllers\Brandmodel\BrandModelShowController;
+use App\Http\Controllers\Brandmodel\BrandModelStoreController;
+use App\Http\Controllers\Brandmodel\BrandModelUpdateController;
+
+
+
+
+
+
+
+
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -49,6 +72,27 @@ Route::delete('/products/{id}',ProductDestroyController::class);
 Route::patch('/products/{id}',ProductUpdateController::class);
 
 Route::post('/products/{id}',ProductShowyController::class);
+
+
+// Brands
+Route::post('/addbrands',BrandStoreController::class);
+Route::get('/',BrandIndexController::class);
+Route::delete('/brands/{id}',BrandDestroyController::class);
+Route::post('/brands/{id}',BrandShowController::class);
+Route::patch('/brands/{id}',BrandUpdateController::class);
+
+
+// BrandModels
+Route::post('/addbrandsmodels',BrandModelStoreController::class);
+Route::get('/viewbrandsmodels',BrandModelIndexController::class);
+Route::delete('/brandsmodels/{id}',BrandModelDestroyController::class);
+Route::post('/brandsmodels/{id}',BrandModelShowController::class);
+Route::patch('/brandsmodels/{id}',BrandModelUpdateController::class);
+
+
+
+
+
 
 
 
