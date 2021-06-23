@@ -74,12 +74,20 @@ Route::post('/products/{id}',ProductShowyController::class);
 
 
 // Brands
-Route::post('/addbrand',BrandStoreController::class);
-Route::get('/',BrandIndexController::class);
-Route::delete('/brands/{id}',BrandDestroyController::class);
-Route::post('/brands/{id}',BrandShowController::class);
-Route::patch('/brands/{id}',BrandUpdateController::class);
+// Route::post('/addbrand',BrandStoreController::class);
+// Route::get('/',BrandIndexController::class);
+// Route::delete('/brands/{id}',BrandDestroyController::class);
+// Route::post('/brands/{id}',BrandShowController::class);
+// Route::patch('/brands/{id}',BrandUpdateController::class);
 
+
+Route::prefix('brand')->name('brand.')->group(function() {
+    Route::get('/',BrandIndexController::class)->name('index');
+    Route::post('/', BrandStoreController::class)->name('store');
+    Route::delete('/{id}',BrandDestroyController::class)->name('destroy');
+    Route::post('/{id}',BrandShowController::class)->name('show');
+    Route::patch('/{id}',BrandUpdateController::class)->name('update');
+});
 
 // BrandModels
 Route::post('/addbrandmodels',BrandModelStoreController::class);
