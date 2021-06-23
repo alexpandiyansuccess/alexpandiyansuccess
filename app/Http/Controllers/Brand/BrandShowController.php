@@ -21,8 +21,11 @@ class BrandShowController extends Controller
      */
     public function __invoke($id)
     {
-  
-       return new BrandResource(Brands::with('brandModels')->find($id));
-
+       $brand = Brands::with('brandModels')->find($id);
+       if($brand) {
+         return new BrandResource($brand);
+       }
+        
+       return response()->json(['msg' => 'Brand not available']); 
     }
 }
