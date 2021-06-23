@@ -14,7 +14,7 @@ class Brands extends Model
         'cost'
     ];
 
-    public function BrandModels() {
+    public function brandModels() {
         return $this->hasMany(BrandModels::class);
     }
 }

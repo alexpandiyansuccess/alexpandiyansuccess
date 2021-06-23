@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Brandmodel;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Brandsmodels;
+use App\Models\BrandModels;
 
 
 class BrandModelDestroyController extends Controller
@@ -17,7 +17,7 @@ class BrandModelDestroyController extends Controller
      */
     public function __invoke($id)
     {
-        $branmodel = Brandsmodels::findOrFail($id);
+        $branmodel = BrandModels::findOrFail($id);
 
         if($branmodel->delete()){
             return response()->json([

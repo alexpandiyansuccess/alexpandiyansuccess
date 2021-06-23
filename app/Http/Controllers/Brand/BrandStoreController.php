@@ -21,5 +21,7 @@ class BrandStoreController extends Controller
         $brand=Brands::create($request->validated());
 
         return new BrandResource($brand);
+
+        
     }
 }

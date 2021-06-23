@@ -21,9 +21,7 @@ class BrandIndexController extends Controller
     public function __invoke(Request $request)
     {
         $brand = Brands::paginate(10);
-
-
-        return Brands::with('BrandModels')->find($brand);
+        return Brands::with('brandModels')->find($brand);
 
     }
 }

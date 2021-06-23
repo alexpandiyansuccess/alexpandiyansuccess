@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Brandmodel;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Resources\BrandResource;
-use App\Models\Brandsmodels;
+use App\Models\BrandModels;
 
 
 class BrandModelShowController extends Controller
@@ -22,7 +22,7 @@ class BrandModelShowController extends Controller
 
         // return new BrandResource($brand);
 
-        return Brandsmodels::find($id)->getBrand;
+        return BrandModels::find($id)->getBrand;
 
        
     }
