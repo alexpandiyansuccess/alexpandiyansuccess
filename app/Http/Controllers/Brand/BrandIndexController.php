@@ -20,6 +20,6 @@ class BrandIndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return BrandResource::collection(Brand::with('brandModels')->paginate(10));
+        return BrandResource::collection(Brands::with('brandModels')->paginate(10));
     }
 }

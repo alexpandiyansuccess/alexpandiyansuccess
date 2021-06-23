@@ -18,7 +18,7 @@ class BrandStoreController extends Controller
      */
     public function __invoke(BrandRequest $request)
     {
-        $brand = new Brand;
+        $brand = new Brands;
         $brand->fill($request->validated());
         $brand->save();
         
