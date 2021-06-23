@@ -20,7 +20,7 @@ class BrandUpdateController extends Controller
      */
     public function __invoke(BrandRequest $request,$id)
     {
-        $brand = Brands::findOrFail($id);
+       $brand = Brands::findOrFail($id);
        $brand->update($request->validated());
 
        return new BrandResource($brand);
