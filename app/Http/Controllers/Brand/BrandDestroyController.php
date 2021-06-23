@@ -21,7 +21,7 @@ class BrandDestroyController extends Controller
 
         if($brand->delete()){      
             return response()->json([
-            'message'=>"Brand has been deleted successfully !"
+                "message" => "Brand has been deleted successfully!"
             ]);
         }
         
