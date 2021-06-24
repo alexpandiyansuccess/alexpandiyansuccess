@@ -55,7 +55,7 @@ class Brand extends Command
             
         ]);
         if ($validator->fails()) {
-            $this->error('Brand not created. See error messages below:');
+            $this->error('Brand not created');
         
             foreach ($validator->errors()->all() as $error) {
                 $this->error($error);
