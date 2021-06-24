@@ -20,10 +20,7 @@ class BrandStoreController extends Controller
     {
         $brand = new Brands;
         $brand->fill($request->validated());
-        $brand->save();
-        
+        $brand->save();        
         return new BrandResource($brand);
-
-        
     }
 }

@@ -14,5 +14,7 @@ class BrandModels extends Model
        'model'
     ];
 
-  
+  public function brands() {
+        return $this->belongsTo(Brands::class);
+    }
 }

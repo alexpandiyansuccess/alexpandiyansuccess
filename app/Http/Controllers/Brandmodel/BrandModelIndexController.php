@@ -8,6 +8,8 @@ use App\Http\Resources\BrandResource;
 use App\Http\Resources\BrandModelResource;
 
 use App\Models\BrandModels;
+use App\Models\Brands;
+
 
 
 
@@ -21,8 +23,8 @@ class BrandModelIndexController extends Controller
      */
     public function __invoke(Request $request)
     {
-        $brand = BrandModels::paginate(10);
+        
 
-        return BrandModelResource::collection($brand);
+        return BrandModelResource::collection(BrandModels::with('brands')->paginate(10));
     }
 }

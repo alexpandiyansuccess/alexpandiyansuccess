@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Brandmodel;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Http\Resources\BrandResource;
+use App\Http\Resources\BrandModelResource;
 use App\Models\BrandModels;
 
 
@@ -18,11 +18,14 @@ class BrandModelShowController extends Controller
      */
     public function __invoke($id)
     {
-        // $brand = Brandsmodels::findOrFail($id);
+        // return BrandModels::find($id)->getBrand;
 
-        // return new BrandResource($brand);
-
-        return BrandModels::find($id)->getBrand;
+        $brandModel = BrandModels::with('brands')->find($id);
+        if($brandModel) {
+          return new BrandModelResource($brandModel);
+        }
+         
+        return response()->json(['message' => 'Brand Model id not available']); 
 
        
     }
