@@ -67,7 +67,7 @@ class Brand extends Command
         $addbrand = Brands::create(['brand_name' => $brand_name,'cost' => $cost]);
     
         if($addbrand){
-            $this->info("added successfully !");
+            $this->info("Brand added successfully !");
         }else{
             $this->info("Something went to wrong !");
         }
