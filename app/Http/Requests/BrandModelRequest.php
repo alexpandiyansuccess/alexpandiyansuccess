@@ -24,7 +24,7 @@ class BrandModelRequest extends FormRequest
     public function rules()
     {
         return [
-            'brand_id'=>['required'],
+            'brands_id'=>['required'],
             'model'=>['required','max:10'],
         ];
     }
