@@ -7,7 +7,7 @@ use App\Models\Brands;
 use App\Http\Resources\BrandResource;
 use Illuminate\Support\Facades\Validator;
 
-class Brand extends Command
+class CreateBrandCommand extends Command
 {
     /**
      * The name and signature of the console command.
