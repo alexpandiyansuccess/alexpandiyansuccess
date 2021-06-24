@@ -68,6 +68,8 @@ class Brand extends Command
     
         if($addbrand){
             $this->info("added successfully !");
+        }else{
+            $this->info("Something went to wrong !");
         }
        
     }
